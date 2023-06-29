@@ -7,8 +7,8 @@ import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import ChatIcon from '@mui/icons-material/Chat';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import { useDispatch } from "react-redux";
-import { logout } from "./features/userSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, selectUser } from "./features/userSlice";
 import { auth } from "./firebase";
 
 export default function Header() {
@@ -44,7 +44,7 @@ export default function Header() {
             <HeaderOption Icon={ChatIcon} title="Messaging"/>
             <HeaderOption Icon={NotificationsIcon} title="Notifications"/>
             <HeaderOption 
-              avatar="https://i0.wp.com/www.followchain.org/wp-content/uploads/2021/09/best-discord-profile-pictures-11.png?resize=256%2C256&ssl=1"  
+              avatar={true}
               title="Me"
               onClick={logoutOfApp}
             />
