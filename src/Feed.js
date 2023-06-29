@@ -9,12 +9,12 @@ import CalendarViewDayIcon from '@mui/icons-material/CalendarViewDay';
 import Post from "./Post";
 import { db } from "./firebase";
 import firebase from 'firebase/compat/app';
-import { useSelector } from "react-redux";
-import { selectUser } from "./features/userSlice";
+// import { useSelector } from "react-redux";
+// import { selectUser } from "./features/userSlice";
 import FlipMove from "react-flip-move";
 
 export default function Feed() {
-    const user = useSelector(selectUser);
+    // const user = useSelector(selectUser);
     const [input, setInput] = useState('');
     const[posts, setPosts] = useState([]);
 
